@@ -1,6 +1,6 @@
 # Week 2 Requirements Specification — TalentRank (Explainable Machine Learning for Employee Promotion Prediction and Ranking)
 
-**Version:** 1.0 — V1 proposal. Thresholds are provisional engineering targets, to be reviewed after a baseline run.
+**Version:** 1.0
 
 ---
 
