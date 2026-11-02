@@ -56,8 +56,8 @@ Organisations need to review employee information when considering promotion dec
 |------|-------|-------------|--------|
 | W1 | System map + project scope | README + project scope | ✅ Completed |
 | W2 | Requirements + system architecture | Requirements + architecture documents | ✅ Completed |
-| W3 | Data engineering and pipeline | Pipeline notebook + data inventory + pipeline diagram | ✅ Completed |
-| W4 onwards | Model development, evaluation and system implementation | To be updated | ✅ Completed |
+| W3 | Data engineering and pipeline | Pipeline notebook + data inventory + pipeline diagram | In progress |
+| W4 onwards | Model development, evaluation and system implementation | To be updated | Pending |
 
 ## Repository Structure (Latest)
 
