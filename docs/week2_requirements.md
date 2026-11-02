@@ -26,21 +26,19 @@
 
 ## Section 1 — Functional Requirements (FR)
 
-| ID | Requirement |
-|---|---|
-| FR1 | The system shall load the selected public employee promotion dataset and report its dimensions, target distribution, missing values, and duplicate records. It shall not silently assume the dataset is clean or that every column has a verified meaning. |
-| FR2 | The system shall prepare features using a documented preprocessing pipeline, including handling missing values and categorical variables as required. It shall not use information from the held-out test set to fit preprocessing or model parameters. |
-| FR3 | The system shall train and compare at least two suitable machine learning models and a simple baseline for the historical promotion target. It shall not claim a model is best based only on training results or accuracy. |
-| FR4 | The system shall produce a predicted promotion probability for each test record and allow records to be ordered by this probability for exploratory ranking. It shall not present this ordering as a validated ranking of leadership potential or role-specific promotion suitability. |
-| FR5 | The system shall report model evaluation metrics on a held-out test set, including precision, recall, F1-score, ROC-AUC, and a precision-recall metric where suitable. It shall not hide the effect of class imbalance or report only accuracy. |
-| FR6 | The system shall provide a feature-level explanation of model predictions using a documented method such as SHAP, if compatible with the selected model. It shall not describe feature contributions as proof of causation. |
-| FR7 | The system shall display a clear explanation that results reflect patterns in historical promotion data and require human review. It shall not recommend or automatically approve/reject an employee for promotion. |
+| ID | Requirement - The system SHALL | Scope Boundary - SHALL NOT (where relevant) |
+|---|---|---|
+| FR1 | Allow the user to load and inspect the selected employee dataset, including its records, features, data types, missing values and historical promotion outcome distribution. | Allow the user to load and inspect the selected employee dataset, including its records, features, data types, missing values and historical promotion outcome distribution. |
+| FR2 | Analyse employee features and present relevant statistical information about their association with historical promotion outcomes. | Claim that observed feature associations prove causation or represent the actual reasons behind promotion decisions. |
+| FR3 | Develop and train machine learning models using the prepared employee dataset to predict historical promotion outcomes. | Claim that model predictions guarantee future promotion outcomes. |
+| FR4 | Generate and display employee rankings based on their predicted promotion probabilities from the developed machine learning models. | Present rankings as definitive promotion recommendations or automatic employment decisions. |
+| FR5 | Generate and display explanations showing the employee features that influence model predictions. | Present feature contributions as causal explanations or proof of actual organisational promotion decisions. |
 
 ## Section 2 — Non-Functional Requirements (NFR)
 
 | ID | Quality Dimension | Requirement | Measurement Method | Metric | Threshold |
 |---|---|---|---|---|---|
-| NFR1 | Predictive performance | The selected model shall outperform or provide a justified trade-off against a simple baseline on held-out data. | Compare the same test split and report precision, recall, F1-score, ROC-AUC, and PR-AUC where suitable. | Test-set F1 and PR-AUC compared with baseline | Provisional: improve PR-AUC over baseline; report actual values and uncertainty; do not claim success if no improvement is observed. |
+| NFR1 | Predictive performance | The developed models shall provide measurable predictive performance on unseen employee records. | Compare the same test split and report precision, recall, F1-score, ROC-AUC, and PR-AUC where suitable. | PR-AUC | Evaluate the final model using a held-out test dataset and compare its PR-AUC with the positive-class prevalence baseline. | Proposed target: PR-AUC greater than the positive-class prevalence baseline. Report precision, recall, F1-score and ROC-AUC as supporting metrics. |
 | NFR2 | Reproducibility | The training and evaluation process shall be repeatable using documented preprocessing, data splits, model settings, and random seeds where applicable. | Run the documented pipeline again and compare test predictions and metrics under the same environment. | Difference in reported metrics under the same configuration | Provisional: identical results for deterministic steps; document any expected variation. |
 | NFR3 | Processing performance | The prototype shall train and evaluate the selected models within a practical time on the documented development environment. | Record end-to-end training and evaluation time for the selected dataset and environment. | Total runtime | Provisional: complete a full experiment within 10 minutes on the documented environment; revise after a baseline run if necessary. |
 | NFR4 | Ranking evaluation validity | Any ranking claim shall use an appropriate ranking metric only when a defensible relevance label or reference ranking is available. | Document the ranking target and calculate a suitable metric, such as NDCG@k, if the target supports it; otherwise report ranking as exploratory. | Availability of a defensible ranking target; NDCG@k if applicable | 100% of ranking claims state the target and limitation; no validated ranking claim without suitable reference labels. |
