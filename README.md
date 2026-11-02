@@ -30,8 +30,8 @@ The dataset supports prediction of historical promotion outcomes but does not me
 ## 6. Initial Project Objectives
 
 - **O1:** Investigate employee features associated with historical promotion outcomes.
-- **O2:** Develop and compare machine learning models for promotion prediction and ranking.
-- **O3:** Evaluate model performance and explain the features that influence predictions.
+- **O2:** Develop machine learning models for promotion prediction and ranking.
+- **O3:** Evaluate the predictive performance and interpretability of the developed machine learning models.
 
 ## 7. Target Users
 
@@ -95,10 +95,3 @@ ai-engineering-talentrank/
 | Week 2 | Requirements, evaluation, architecture | Requirements, evaluation criteria, architecture PNG and decisions | Draft V1 (pivoted to TalentRank) |
 | Week 3 | V1 data pipeline (Pathway B — tabular) | Notebook, data inventory, pipeline diagram, pipeline decisions, prepared outputs, lineage manifests | Complete — PASS on repeatability and lineage validation |
 | Week 4 onward | Data quality and Responsible AI assessment | To be defined in later labs | Not started |
-
-## 12. Important Submission Checks
-
-- Verify the exact bibliographic details for every paper before final submission.
-- Download the Kaggle dataset locally per `data/DATASET_SOURCE.txt`; do not commit the raw CSV if it exceeds repository size limits.
-- Confirm class-imbalance handling and held-out test discipline before reporting any results.
-- Commit the files to GitHub and update this README as the project develops.
