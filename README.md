@@ -1,11 +1,11 @@
-# TalentRank — Explainable Machine Learning for Employee Promotion Prediction and Ranking
+# TalentRank - Explainable Machine Learning for Employee Promotion Prediction and Ranking
 
-**Course:** AI Engineering — Topic 1 and Topic 2
+**Course:** AI Engineering - Topic 1 and Topic 2
 **Project status:** V1 proposal; thresholds and model choices are provisional until a baseline experiment is run.
 
 ## 1. Project Overview
 
-TalentRank develops and compares machine learning models that predict historical employee promotion outcomes from a public HR dataset, explore ranking employees by predicted promotion probability, and explain which recorded features influence each prediction. The system supports HR Talent Management Specialists and senior management with analysis, it does not make or automate promotion decisions.
+TalentRank develops and compares machine learning models that predict historical employee promotion outcomes from a public HR dataset, explore ranking employees by predicted promotion probability, and explain which recorded features influence each prediction. The system supports HR Talent Management Specialists and senior management with analysis — it does not make or automate promotion decisions.
 
 ## 2. Problem Statement
 
@@ -29,9 +29,9 @@ The dataset supports prediction of historical promotion outcomes but does not me
 
 ## 6. Initial Project Objectives
 
-- **O1:** To investigate employee features associated with historical promotion outcomes.
-- **O2:** To develop machine learning models for promotion prediction and ranking.
-- **O3:** To evaluate the predictive performance and interpretability of the developed machine learning models. 
+- **O1:** Investigate employee features associated with historical promotion outcomes.
+- **O2:** Develop and compare machine learning models for promotion prediction and ranking.
+- **O3:** Evaluate model performance and explain the features that influence predictions.
 
 ## 7. Target Users
 
@@ -55,14 +55,26 @@ ai-engineering-talentrank/
 ├── docs/
 │   ├── week1_observation_sheet.md
 │   ├── week1_project_scope.md
-│   ├── week1_system_map.jpeg
 │   ├── week2_requirements.md
 │   ├── week2_evaluation_criteria.md
 │   ├── week2_architecture_v1.png
-│   └── week2_architecture_decisions.md
+│   ├── week2_architecture_decisions.md
+│   ├── week3_data_inventory.md
+│   ├── week3_pipeline_diagram.png
+│   └── week3_pipeline_decisions.md
 ├── data/
+│   ├── raw/
+│   │   └── employee_promotion.csv
+│   ├── processed/
+│   │   └── prepared_table.csv
+│   ├── pipeline_v1/
+│   │   └── tabular/
+│   │       ├── prepared_table.csv
+│   │       └── pipeline_manifest.json
+│   └── week3_manifest.json
 ├── src/
 ├── notebooks/
+│   └── week3_pipeline.ipynb
 ├── evaluation/
 └── prompts/
 ```
@@ -81,7 +93,8 @@ ai-engineering-talentrank/
 |---|---|---|---|
 | Week 1 | Initial observation and project scope | Observation sheet, scope, README | Complete |
 | Week 2 | Requirements, evaluation, architecture | Requirements, evaluation criteria, architecture PNG and decisions | Draft V1 (pivoted to TalentRank) |
-| Week 3 onward | Data preparation and model implementation | To be defined in later labs | Not started |
+| Week 3 | V1 data pipeline (Pathway B — tabular) | Notebook, data inventory, pipeline diagram, pipeline decisions, prepared outputs, lineage manifests | Complete — PASS on repeatability and lineage validation |
+| Week 4 onward | Data quality and Responsible AI assessment | To be defined in later labs | Not started |
 
 ## 12. Important Submission Checks
 
