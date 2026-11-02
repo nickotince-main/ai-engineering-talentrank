@@ -1,53 +1,65 @@
 # TalentRank - Explainable Machine Learning for Employee Promotion Prediction and Ranking
 
-**Course:** AI Engineering - Topic 1 and Topic 2
-**Project status:** V1 proposal; thresholds and model choices are provisional until a baseline experiment is run.
+> TalentRank develops explainable machine learning models to predict and rank historical employee promotion outcomes, supporting HR Talent Management Specialists and top management in reviewing employee information.
 
-## 1. Project Overview
+## Problem Statement
 
-TalentRank develops and compares machine learning models that predict historical employee promotion outcomes from a public HR dataset, explore ranking employees by predicted promotion probability, and explain which recorded features influence each prediction. The system supports HR Talent Management Specialists and senior management with analysis, it does not make or automate promotion decisions.
+Organisations need to review employee information when considering promotion decisions. However, investigating employee features associated with historical promotion outcomes and understanding prediction results can be challenging, especially when dealing with many employee records. Machine learning can help identify patterns in historical employee data, predict promotion outcomes, and provide explanations of the features influencing the predictions.
 
-## 2. Problem Statement
+## Evidence of the Problem
 
-Companies need to review employee information when making promotion decisions, but comparing many employees consistently and understanding which factors drive a model's prediction is difficult. This project investigates whether ML classification, exploratory ranking, and explanation methods can support (not replace) that human review process.
+- Employee promotion prediction is an existing HR analytics research area, showing the use of employee-related data to study historical promotion outcomes.  
+  Source: [Employee Promotion Prediction Dataset - Kaggle](https://www.kaggle.com/datasets/muhammadimran112233/employees-evaluation-for-promotion)
 
-## 3. Evidence of the Problem
+- Historical promotion outcomes may be imbalanced, making predictive performance more difficult to evaluate using accuracy alone.  
+  Source: [Employee Promotion Prediction Dataset - Kaggle](https://www.kaggle.com/datasets/muhammadimran112233/employees-evaluation-for-promotion)
 
-- A public HR Analytics promotion dataset contains 54,808 employee records and a binary promotion outcome, supporting study of historical promotion patterns (Kaggle, *HR Analytics: Employee Promotion Data*).
-- Published research has already applied ML to this dataset for promotion prediction, confirming the task is well-posed while leaving room for a clearly defined model-comparison and explanation workflow (*Analysis and Prediction of Employee Promotions Using Machine Learning*, IEEE, 2022).
+## Initial Related Work / Existing Approaches
 
-## 4. Initial Related Work
+- **Traditional Machine Learning for Employee Promotion Prediction** — Uses employee-related features to predict promotion outcomes.  
+  Source: [Employee Promotion Prediction Dataset - Kaggle](https://www.kaggle.com/datasets/muhammadimran112233/employees-evaluation-for-promotion)  
+  Key limitation: The dataset provides historical promotion labels but does not explain the reasons behind actual promotion decisions.
 
-- **Analysis and Prediction of Employee Promotions Using Machine Learning** (IEEE, 2022) — https://ieeexplore.ieee.org/document/9943959/ — classification comparison on the same dataset; doesn't establish leadership potential or destination role.
-- **Bitkuri et al. (2025), A Review of Machine Learning Ranking Systems** — https://www.cmjpublishers.com/wp-content/uploads/2025/10/a-review-of-machine-learning-ranking-systems-methods-applications-and-challenges.pdf — general ranking methods/evaluation reference.
-- **Cecil et al. (2024), Explainability does not mitigate the negative impact of incorrect AI advice in a personnel selection task** — *Scientific Reports* — https://www.nature.com/articles/s41598-024-60220-5 — warns explanations alone don't prevent overreliance on incorrect AI advice.
-- **Optimizing employee promotion predictions using machine learning** (2025) — https://www.polipapers.upv.es/index.php/IJPME/article/view/23364 — further model comparisons on the same dataset.
+- **Explainable AI (XAI)** — Provides methods to interpret machine learning predictions and understand the influence of input features.  
+  Source: [SHAP Documentation](https://shap.readthedocs.io/en/latest/)  
+  Key limitation: Feature contribution explanations do not establish causal relationships or prove why an organisation made a promotion decision.
 
-## 5. Engineering Gap
+- **Machine Learning Model Evaluation** — Uses evaluation metrics to assess predictive performance, including precision, recall, F1-score and ROC-AUC.  
+  Source: [Scikit-learn Model Evaluation Documentation](https://scikit-learn.org/stable/modules/model_evaluation.html)  
+  Key limitation: Predictive performance metrics alone do not explain the factors influencing individual predictions.
 
-The dataset supports prediction of historical promotion outcomes but does not measure leadership potential or state promotion destination. The engineering task is to compare suitable ML models, investigate exploratory probability-based ranking, and generate non-causal feature explanations — evaluated rigorously rather than assumed to work.
-
-## 6. Initial Project Objectives
+## Project Objectives
 
 - **O1:** Investigate employee features associated with historical promotion outcomes.
 - **O2:** Develop machine learning models for promotion prediction and ranking.
 - **O3:** Evaluate the predictive performance and interpretability of the developed machine learning models.
 
-## 7. Target Users
+## Target Users
 
-- **Primary:** HR Talent Management Specialists reviewing promotion patterns.
-- **Secondary:** Department Heads, Directors, General Managers, senior management.
-- **Important boundary:** model output supports analysis only; it is never the sole basis for a promotion decision.
+- **HR Talent Management Specialists:** To review employee prediction results and understand the features influencing model predictions.
+- **Top Management:** To obtain additional information when reviewing employees for promotion consideration.
 
-## 8. Proposed Data Sources
+## Data Sources
 
-1. [Kaggle — HR Analytics: Employee Promotion Data](https://www.kaggle.com/datasets/muhammadimran112233/employees-evaluation-for-promotion) — 54,808 records, primary training/evaluation dataset.
-2. [Bitkuri et al. (2025) — A Review of Machine Learning Ranking Systems](https://www.cmjpublishers.com/wp-content/uploads/2025/10/a-review-of-machine-learning-ranking-systems-methods-applications-and-challenges.pdf) — methods/evaluation reference.
-3. [Cecil et al. (2024) — Scientific Reports](https://www.nature.com/articles/s41598-024-60220-5) — RAI/risk reference.
+- **Employee Promotion Dataset** — Public HR dataset containing approximately 54,808 employee records and historical promotion outcomes.  
+  URL: [Kaggle - Employee Promotion Dataset](https://www.kaggle.com/datasets/muhammadimran112233/employees-evaluation-for-promotion)
 
-> Download instructions are in `data/DATASET_SOURCE.txt` — the raw CSV is not committed due to its size; download it from Kaggle before running the notebooks.
+- **SHAP Documentation** — Reference for machine learning explainability methods.  
+  URL: [SHAP Documentation](https://shap.readthedocs.io/en/latest/)
 
-## 9. Repository Structure
+- **Scikit-learn Documentation** — Reference for machine learning development and model evaluation.  
+  URL: [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+
+## Weekly Progress
+
+| Week | Focus | Deliverable | Status |
+|------|-------|-------------|--------|
+| W1 | System map + project scope | README + project scope | ✅ Completed |
+| W2 | Requirements + system architecture | Requirements + architecture documents | ✅ Completed |
+| W3 | Data engineering and pipeline | Pipeline notebook + data inventory + pipeline diagram | ✅ Completed |
+| W4 onwards | Model development, evaluation and system implementation | To be updated | ✅ Completed |
+
+## Repository Structure (Latest)
 
 ```text
 ai-engineering-talentrank/
@@ -78,20 +90,3 @@ ai-engineering-talentrank/
 ├── evaluation/
 └── prompts/
 ```
-
-## 10. Responsible AI
-
-- Use only the public dataset; never add confidential employee records.
-- State clearly that predictions are estimates from historical data, not proof of leadership ability or a specific promotion destination.
-- Describe feature explanations as model behaviour, not causal evidence.
-- Check performance across relevant groups where the data allows, and report limitations honestly — absence of a detected disparity does not prove fairness.
-- Require human review for every output; the system never automates a promotion decision.
-
-## 11. Weekly Progress
-
-| Week | Focus | Deliverable | Status |
-|---|---|---|---|
-| Week 1 | Initial observation and project scope | Observation sheet, scope, README | Complete |
-| Week 2 | Requirements, evaluation, architecture | Requirements, evaluation criteria, architecture PNG and decisions | Draft V1 (pivoted to TalentRank) |
-| Week 3 | V1 data pipeline (Pathway B — tabular) | Notebook, data inventory, pipeline diagram, pipeline decisions, prepared outputs, lineage manifests | Complete — PASS on repeatability and lineage validation |
-| Week 4 onward | Data quality and Responsible AI assessment | To be defined in later labs | Not started |
