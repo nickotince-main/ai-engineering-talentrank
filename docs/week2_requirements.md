@@ -57,4 +57,6 @@
 
 **Which Responsible AI requirement in your project will be the most difficult to measure or enforce technically? Why?**
 
-RAI1 may be difficult to evaluate because historical promotion outcomes may already contain organisational biases. Differences in model performance between employee groups should be reported rather than assumed to be fair simply because the model achieves good overall accuracy.<br><br>RAI3 is also important because users may over-rely on model predictions and rankings. TalentRank must communicate its limitations clearly and ensure that final promotion decisions remain the responsibility of HR personnel and management.
+RAI1 may be difficult to evaluate because historical promotion outcomes may already contain organisational biases. Differences in model performance between employee groups should be reported rather than assumed to be fair simply because the model achieves good overall accuracy.
+
+RAI3 is also important because users may over-rely on model predictions and rankings. TalentRank must communicate its limitations clearly and ensure that final promotion decisions remain the responsibility of HR personnel and management.
