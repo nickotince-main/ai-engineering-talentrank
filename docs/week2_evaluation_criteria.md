@@ -1,8 +1,8 @@
 # Week 2 Evaluation Criteria — TalentRank (Explainable Machine Learning for Employee Promotion Prediction and Ranking)
 
-**Version:** 1.0. Thresholds are proposed targets, not measured results — review after the first baseline experiment and update with reasons if needed.
+**Version:** 1.0
 
-The evaluation uses the public 54,808-record employee promotion dataset to study **historical promotion outcomes**. Its label does not validate leadership potential or suitability for a particular management role. A probability-sorted list is therefore an exploratory ordering unless a defensible ranking reference is available.
+The following criteria connect the project objectives and requirements to measurable evaluation methods. Thresholds are proposed engineering targets and must not be reported as achieved until testing has been completed.
 
 ---
 
