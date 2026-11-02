@@ -1,4 +1,4 @@
-# Architecture Decisions — TalentRank
+# Week 2 Architecture Decisions — TalentRank (Explainable Machine Learning for Employee Promotion Prediction and Ranking)
 
 Version: 1.0
 
