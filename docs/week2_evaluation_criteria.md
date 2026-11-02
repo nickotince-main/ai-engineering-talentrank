@@ -27,4 +27,8 @@ The following criteria connect the project objectives and requirements to measur
 
 **Which evaluation criterion is most important for determining whether your AI application will be useful to its intended users? Why?**
 
-Predictive performance and interpretability are important for TalentRank because a model should not only generate promotion predictions but also provide information that users can understand.<br><br>However, good predictive performance does not guarantee fair or correct promotion decisions. Historical promotion outcomes may contain existing organisational biases, and model explanations cannot prove the actual reasons behind promotion decisions.<br><br>Therefore, TalentRank should be evaluated based on predictive performance, ranking usefulness, interpretability and Responsible AI considerations. The system should remain a decision-support tool, with final promotion decisions made by responsible human decision-makers.
+Predictive performance and interpretability are important for TalentRank because a model should not only generate promotion predictions but also provide information that users can understand.
+
+However, good predictive performance does not guarantee fair or correct promotion decisions. Historical promotion outcomes may contain existing organisational biases, and model explanations cannot prove the actual reasons behind promotion decisions.
+
+Therefore, TalentRank should be evaluated based on predictive performance, ranking usefulness, interpretability and Responsible AI considerations. The system should remain a decision-support tool, with final promotion decisions made by responsible human decision-makers.
