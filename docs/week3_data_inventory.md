@@ -1,4 +1,4 @@
-# Data Inventory — TalentRank
+# Week 3 Data Inventory — TalentRank (Explainable Machine Learning for Employee Promotion Prediction and Ranking)
 
 ## 1. Data Source Overview
 
