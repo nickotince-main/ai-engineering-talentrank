@@ -1,0 +1,32 @@
+{
+    "project": "TalentRank",
+    "pipeline_version": "V1",
+    "source": {
+        "file": "data\\raw\\employee_promotion.csv",
+        "sha256": "9e1c9c62f8ebbeabd4062448df8a8983898f8925c8417df5e204386b7879fdaf",
+        "records": 54808,
+        "columns": 13
+    },
+    "output": {
+        "file": "data\\processed\\prepared_table.csv",
+        "sha256": "03352511987555d36da7f493ed3a66dbdd80295b03a3fecaa263037b5a3e18f0",
+        "records": 54808,
+        "columns": 13,
+        "missing_values": 9093,
+        "duplicate_rows": 0
+    },
+    "transformations": [
+        "Loaded the original CSV dataset.",
+        "Checked for exact duplicate rows.",
+        "Checked text columns for leading and trailing whitespace.",
+        "Removed exact duplicate rows if present.",
+        "Trimmed leading and trailing whitespace from text columns.",
+        "Preserved missing values for later model-specific preprocessing."
+    ],
+    "notes": [
+        "No duplicate rows were found.",
+        "No leading or trailing whitespace was found.",
+        "The preparation operations did not change the dataset values.",
+        "The manifest records file fingerprints and pipeline information; it does not verify data quality or usage rights."
+    ]
+}
