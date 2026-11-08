@@ -76,14 +76,14 @@ ai-engineering-talentrank/
 │   ├── week3_pipeline_diagram.png
 │   └── week3_pipeline_decisions.md
 ├── data/
-│   ├── raw/
-│   │   └── employee_promotion.csv
-│   ├── processed/
-│   │   └── prepared_table.csv
 │   ├── pipeline_v1/
 │   │   └── tabular/
 │   │       ├── prepared_table.csv
 │   │       └── pipeline_manifest.json
+│   ├── processed/
+│   │   └── prepared_table.csv
+│   ├── raw/
+│   │   └── employee_promotion.csv
 │   └── week3_manifest.json
 ├── src/
 ├── notebooks/
