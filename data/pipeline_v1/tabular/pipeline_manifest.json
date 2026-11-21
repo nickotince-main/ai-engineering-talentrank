@@ -1,0 +1,76 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-21T11:43:01+00:00",
+  "environment": {
+    "python": "3.13.18",
+    "pandas": "3.0.5"
+  },
+  "data_type": "tabular",
+  "configuration": {
+    "remove_exact_duplicates": true,
+    "trim_text": true,
+    "impute_missing": false
+  },
+  "processing_method": "remove_exact_duplicates=True; trim_text=True; impute_missing=False",
+  "sources": [
+    {
+      "path": "data/raw/employee_promotion.csv",
+      "sha256": "9e1c9c62f8ebbeabd4062448df8a8983898f8925c8417df5e204386b7879fdaf"
+    }
+  ],
+  "outputs": [
+    "data/pipeline_v1/tabular/prepared_table.csv"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "data/raw/employee_promotion.csv",
+      "output": "data/pipeline_v1/tabular/prepared_table.csv"
+    }
+  ],
+  "inspection": {
+    "rows": 54808,
+    "columns": [
+      "employee_id",
+      "department",
+      "region",
+      "education",
+      "gender",
+      "recruitment_channel",
+      "no_of_trainings",
+      "age",
+      "previous_year_rating",
+      "length_of_service",
+      "awards_won",
+      "avg_training_score",
+      "is_promoted"
+    ],
+    "missing": {
+      "employee_id": 0,
+      "department": 0,
+      "region": 0,
+      "education": 2409,
+      "gender": 0,
+      "recruitment_channel": 0,
+      "no_of_trainings": 0,
+      "age": 0,
+      "previous_year_rating": 4124,
+      "length_of_service": 0,
+      "awards_won": 0,
+      "avg_training_score": 2560,
+      "is_promoted": 0
+    },
+    "exact_duplicates": 0,
+    "promoted": 4668
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "1dd337e5f887f88b98a95f1b98207e557641f6363144abe6447f810468cec76e"
+    ],
+    "output_bytes": [
+      3795951
+    ]
+  },
+  "source_version": "Not verified - collection period and version undocumented",
+  "access_rights": "Not verified - Kaggle licence listed as Unknown"
+}

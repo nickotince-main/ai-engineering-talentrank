@@ -1,0 +1,19 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-21T11:43:01+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "employee_promotion.csv",
+      "source_url": "https://www.kaggle.com/datasets/muhammadimran112233/employees-evaluation-for-promotion",
+      "source_sha256": "9e1c9c62f8ebbeabd4062448df8a8983898f8925c8417df5e204386b7879fdaf",
+      "prepared_output": "data/processed/prepared_table.csv",
+      "prepared_sha256": "1dd337e5f887f88b98a95f1b98207e557641f6363144abe6447f810468cec76e",
+      "processing_note": "remove_duplicates=True; trim_text=True; missing values preserved (no imputation); rejected alternative: drop rows with missing values",
+      "record_id_field": "employee_id",
+      "source_version": "Not verified - collection period and version undocumented",
+      "access_rights": "Not verified - Kaggle licence listed as Unknown",
+      "status": "Prepared; quality review pending (Week 4)"
+    }
+  ]
+}
