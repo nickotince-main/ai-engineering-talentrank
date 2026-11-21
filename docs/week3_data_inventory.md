@@ -1,6 +1,7 @@
 # Week 3 Data Inventory — TalentRank
 
-**Project:** TalentRank — Explainable Machine Learning for Employee Promotion Prediction and Ranking
+**Project:** TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
+
 **Version:** 1.0 · Notebook: `notebooks/week3_pipeline.ipynb`
 
 ## 1. From Topic 2 Requirements to Data Needs (Step A1)
