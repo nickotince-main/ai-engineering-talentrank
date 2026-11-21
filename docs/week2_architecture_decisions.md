@@ -1,6 +1,7 @@
 # Week 2 Architecture Decisions — TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
 
 **Project:** TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
+
 **Version:** 1.0 · Diagram: `docs/week2_architecture_v1.png`
 
 ## 1. Start Simple (Step C1)
