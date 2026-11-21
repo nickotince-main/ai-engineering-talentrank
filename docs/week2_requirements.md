@@ -1,4 +1,4 @@
-# Week 2 Requirements Specification — TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
+# Week 2 Requirements Specification — TalentRank
 
 **Project:** TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
 
