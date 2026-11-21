@@ -76,14 +76,6 @@ Data dictionary, checksums and licence status: [data/README.md](data/README.md).
 
 **Conditions:** (1) gender and age are excluded from model inputs and used only for auditing; (2) missing values are handled inside the training pipeline (fitted on the training split only); (3) a fairness audit is reported with every model result; (4) evaluation uses PR-AUC and Precision@10%, not accuracy; (5) rankings remain decision support.
 
-**Unresolved actions:**
-
-| Action | When |
-|---|---|
-| Fairness controls and audit of the top-10% list by gender and age band (historical age ratio 0.72) | Weeks 5–6 |
-| Test a within-department standardised training score (department means range from 50.2 to 84.6) | Week 5 |
-| Timeliness, licence and consent are **N.V.**; re-review if provenance information is found | Ongoing |
-
 ## How to Run (VS Code or Google Colab)
 
 **VS Code (local):**
