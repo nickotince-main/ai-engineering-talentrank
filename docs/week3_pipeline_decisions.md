@@ -1,6 +1,7 @@
 # Week 3 Pipeline Decisions — TalentRank
 
-**Project:** TalentRank — Explainable Machine Learning for Employee Promotion Prediction and Ranking
+**Project:** TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
+
 **Version:** 1.0 · Diagram: `docs/week3_pipeline_diagram.png` · Notebook: `notebooks/week3_pipeline.ipynb`
 
 ## 1. Requirements Supported
