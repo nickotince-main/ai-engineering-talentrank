@@ -1,9 +1,9 @@
 {
   "pipeline_version": "week3-v1",
-  "generated_at_utc": "2026-11-21T11:43:01+00:00",
+  "generated_at_utc": "2026-11-21T16:05:15+00:00",
   "environment": {
-    "python": "3.13.18",
-    "pandas": "3.0.5"
+    "python": "3.12.3",
+    "pandas": "3.0.1"
   },
   "data_type": "tabular",
   "configuration": {
