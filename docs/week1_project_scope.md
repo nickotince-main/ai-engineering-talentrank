@@ -1,5 +1,4 @@
-# Week 1 Project Scope — TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
-
+# Week 1 Project Scope — TalentRank
 | | |
 |---|---|
 | **Project Name** | TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking |
