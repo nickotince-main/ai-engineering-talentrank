@@ -1,6 +1,6 @@
 # Week 4 — Data Quality & Bias Report: TalentRank
 
-**Project:** TalentRank — Explainable Machine Learning for Employee Promotion Prediction and Ranking  
+**Project:** TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking  
 **Evidence:** `notebooks/week4_data_quality_checks.ipynb` (all figures below), `notebooks/week3_pipeline.ipynb`  
 **Labels:** **Observed** = measured in the data · **Inferred risk** = plausible consequence, not proven · **N.V.** = Not Verified
 
@@ -46,6 +46,7 @@
 | Items tested | 54,808 (all) | 54,808 (all) |
 | Result | 54,808 pass / 0 fail | 54,807 pass / **1 fail** — Operations employee, age 30, 13 years of service (would have started at 17) |
 | Action | Hard fail / quarantine if any row fails; none did | **Manual review, keep.** Starting work at 17 is possible, so this is an exception, not a defect. Kept with a flag; ID not shown. |
+| Why this condition | A missing or invalid label cannot be learned from or evaluated | Ratings and scores have documented scales (1–5; 0–100). The ratings rule allows missing values only where Topic 3 explained them. Age 18 is a common adult entry age, used only to **flag records for review**, never to remove them. |
 
 ## 4. Duplicate, Anomaly and Coverage Findings
 
@@ -57,7 +58,7 @@
 | Promoted (1) | 4,668 | 8.52% |
 | Total | 54,808 | 100% |
 
-**Observed:** the target is highly imbalanced. A model that always predicts "not promoted" would already be 91.48% accurate, so accuracy will not be used to judge models. Evaluation will use PR-AUC and Precision@10% (Topic 2 NFR1, NFR5), with a stratified train/test split.
+**Observed:** the target is highly imbalanced. A model that always predicts "not promoted" would already be 91.48% accurate, so accuracy will not be used to judge models. Evaluation will use PR-AUC and Precision@10% (Topic 2 NFR1, NFR5), with a stratified train/test split. Precision@K measures how many of the top K ranked employees are relevant, i.e. were actually recommended for promotion (Murrell, 2025, https://tullie.ai/blog/precision-at-k-ranking). With an 8.52% base rate, a random top 10% would give Precision@10% ≈ 0.085.
 
 **Department overview (all nine departments):**
 
