@@ -1,4 +1,4 @@
-# TalentRank — Explainable Machine Learning for Employee Promotion Prediction and Ranking
+# TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
 
 > TalentRank predicts historical employee promotion outcomes, ranks employees by predicted probability and explains each ranking, giving HR Talent Management Specialists and top management additional information for human review. It does not make promotion decisions.
 
