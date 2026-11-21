@@ -1,6 +1,6 @@
-# Week 2 Architecture Decisions — TalentRank
+# Week 2 Architecture Decisions — TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
 
-**Project:** TalentRank — Explainable Machine Learning for Employee Promotion Prediction and Ranking
+**Project:** TalentRank: Explainable Machine Learning for Employee Promotion Prediction and Ranking
 **Version:** 1.0 · Diagram: `docs/week2_architecture_v1.png`
 
 ## 1. Start Simple (Step C1)
@@ -26,7 +26,7 @@
 | NFR3 | Repeatable results | Run records with data fingerprints, configuration and seed |
 | NFR4 | Practical processing time | Timing point in **Model Evaluation** |
 | RAI1 | Gender/age not used as inputs; fair top-of-list selection | **Responsible AI Controls** — protected-attribute filter + fairness audit of the ranked list |
-| RAI2 | No exposure of employee data | **Responsible AI Controls** — privacy and data protection |
+| RAI2 | No exposure of employee data beyond the public dataset; no external transfers | **Responsible AI Controls** — privacy and data protection |
 | RAI3 | Results presented as decision support only | **Responsible AI Controls** — transparency and human oversight on **TalentRank Results** |
 
 ## 3. Architecture Decision Records (ADR)
@@ -46,8 +46,9 @@
 | O1 | FR1, FR2 | Inspection correctness; feature investigation | Employee Data Processing | Week 3 notebook, data inventory, feature analysis tables |
 | O2 | FR3, NFR1 | Prediction performance | Machine Learning Model; Model Evaluation | PR-AUC, ROC-AUC, F1 on the test set |
 | O2 | FR4, NFR5 | Ranking quality | Employee Ranking; Model Evaluation | Precision@10%, Lift@10% |
-| O2, O3 | FR5, NFR2 | Explanation coverage and stability | Prediction Explainability | Explanation coverage; top-5 overlap across 3 seeds |
-| O3 | NFR3, NFR4 | Reproducibility; processing time | Run records; Model Evaluation | Hash comparison; timing results |
+| O2, O3 | FR5, NFR2 | Explanation coverage and stability | Prediction Explainability; Model Evaluation | Explanation coverage; top-5 overlap across 3 bootstrap resamples |
+| O3 | NFR4 | Processing time | Model Evaluation (timing point) | Timing results |
+| O3 | NFR3 | Reproducibility check (engineering control) | Run records (data fingerprints, configuration, seed) | Hash and metric comparison of two identical runs |
 | O3 | RAI1 | Fairness of the ranked list | Responsible AI Controls | Four-fifths ratios, recall gaps, with/without comparison |
 | O2 | RAI2, RAI3 | Privacy; disclaimer coverage | Responsible AI Controls; TalentRank Results | Output inspection; screenshots |
 
