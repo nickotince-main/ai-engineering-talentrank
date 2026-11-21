@@ -16,7 +16,7 @@
 | **Objective O1** | To investigate employee features associated with historical promotion outcomes in a public HR dataset. |
 | **Objective O2** | To develop explainable machine learning models that predict historical promotion outcomes, rank employees by predicted probability and explain each ranking. |
 | **Objective O3** | To evaluate the developed models in terms of predictive performance, ranking quality, explanation stability and fairness across employee groups. |
-| **Intended Users** | HR Talent Management Specialists; Top Management. |
+| **Intended Users** | HR Talent Management Specialists and Top Management. |
 | **Supported Tasks** | Inspect the employee dataset · analyse features linked to promotion · predict promotion probability · rank employees by probability · show global and individual explanations · report performance, ranking and fairness results. |
 | **Information / Knowledge Domain** | Structured HR records — 54,808 employees, 13 columns, all nine departments.<br>**Model inputs:** department, region, education, recruitment_channel, no_of_trainings, previous_year_rating, length_of_service, awards_won, avg_training_score.<br>**Fairness audit only (not model inputs):** gender, age.<br>**Identifier:** employee_id. **Target:** is_promoted (recommended for promotion). Definitions: `data/README.md`. |
 | **Operating Context** | One-semester academic prototype run in Python (local or Google Colab) on a public dataset, used to demonstrate decision support. Not a production HR system. |
